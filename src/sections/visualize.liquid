@@ -1,0 +1,49 @@
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive center-block" src="https://cdn.shopify.com/s/files/1/2600/6070/files/haitiart.png?6675989191430488143" alt="haitiArt">
+                </div>
+                <div class="col-sm-6">
+                	<h2 class="section-header">Visualize Our Impact</h2>
+                	<p class="lead text-muted">Haiti Coffee was founded with the aim to rebuild the Haitian coffee industry and to help farmers redevelop their agricultural heritage as one of the world’s top coffee exporters. With the perfect climate, Haiti produces natural forest shade grown, hand-picked gourmet specialty Arabica coffee that is renowned as an Espresso base, prized in specialty coffee houses.</p>
+
+        <a href="{{ section.settings.button_link }}" class="btn hero__btn">
+          {{ 'Learn More' | escape }}
+        </a>
+  
+
+                </div>                
+                
+            </div>
+        </div>
+    </section>
+
+{% schema %}
+  {
+    "name": "Visualize",
+    "settings": [
+	{
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+	{
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+
+	],"presets": [
+      {
+        "name": "Visualize",
+        "category": "Image"
+      }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,52 @@
+     <section class="content content-2", style = "background-color:#962E34">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                  	<br>
+                	<h2 class="section-header">Try Us Out</h2>
+                	<p class="lead text-light">Our coffee can be found at various different locations across America. Click below to see where we're offered.</p>
+
+        <a href="{{ section.settings.button_link }}" class="btn hero__btn">
+          {{ section.settings.button_label | escape }}
+        </a>
+
+      
+                </div>    
+                <div class="col-sm-6">
+                    <img class="img-responsive center-block" src="https://cdn.shopify.com/s/files/1/2600/6070/files/testcoffee.png?3477505964490798907" alt="test coffee">
+                </div>            
+                
+            </div>
+        </div>
+    </section>    
+
+
+
+{% schema %}
+  {
+    "name": "tryusout",
+    "settings": [
+		{
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+	      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+
+	],"presets": [
+      {
+        "name": "tryusout",
+        "category": "Image"
+      }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

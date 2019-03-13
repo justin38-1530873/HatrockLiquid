@@ -1,0 +1,120 @@
+
+<footer class="page-footer">
+      <div class="footer-column">
+        <img src="{{ 'logo.png' | asset_url }}" alt="" title="" style="width: 40%"/>
+        <div class="social">
+          {% if settings.social_facebook_link != blank %}
+            <a class="social-icons__link" href="{{ settings.social_facebook_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+              {% include 'icon-facebook' %}
+              <span class="icon__fallback-text">Facebook</span>
+            </a>
+          {% endif %}
+          {% if settings.social_twitter_link != blank %}
+            <a class="social-icons__link" href="{{ settings.social_twitter_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Twitter' }}">
+              {% include 'icon-twitter' %}
+              <span class="icon__fallback-text">Twitter</span>
+            </a>
+          {% endif %}
+          {% if settings.social_youtube_link != blank %}
+            <a class="social-icons__link" href="{{ settings.social_youtube_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'YouTube' }}">
+              {% include 'icon-youtube' %}
+              <span class="icon__fallback-text">YouTube</span>
+            </a>
+          {% endif %}
+          {% if settings.social_instagram_link != blank %}
+            <a class="social-icons__link" href="{{ settings.social_instagram_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+              {% include 'icon-instagram' %}
+              <span class="icon__fallback-text">Instagram</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h2>About</h2>
+        <ul><a href="/">Locations</a></ul>
+        <ul><a href="/pages/about-us">Our Story</a></ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Shop</h2>
+        <ul><a href="/collections">Collection</a></ul>
+        <ul><a href="/collections/all">Products</a></ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Join Our Community</h2>
+
+          
+          <form>
+                    <input type="text" id="email" name="email" placeholder="Your email..">
+                    <input type="submit" value="Subscribe">
+                </form>
+
+        </div>
+  
+    <p style="text-align: center" class="copyright"> Copyright &copy; Haiti Coffee Co. 2019</p> 
+</footer>
+
+
+{% stylesheet %}
+/* Page Footer */
+.page-footer {
+    height: 100%;
+	background-color: #121F48;
+    color: #fff;
+    padding: 20px;
+}
+
+.page-footer h2 {
+    font-size: 22px;
+}
+
+.footer-column {
+    width: 25%;
+    float: left;
+}
+
+.page-footer .contact p {
+	font-size: 12px;
+}
+
+.copyright {
+    padding-top: 8em; 
+    font-size: 12px;
+	text-align: center;
+	
+}
+
+.social {
+    display: inline-block;
+	flex-wrap: wrap;
+}
+
+
+
+input[type=text], select, textarea {
+    width: 80%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 1px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 6px;
+  }
+
+  input[type=submit]:hover {
+    background-color: #bdd6be;
+  }
+
+  input[type=submit] {
+    background-color: #ABDFF7;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+
+
+{% endstylesheet %}

@@ -1,0 +1,70 @@
+<div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %} box ratio-container lazyload js"
+     {% if section.settings.image %}
+     data-bgset="{% include 'bgset', image: section.settings.image %}"
+     data-sizes="100%"
+     data-parent-fit="cover"
+     style="background-position: {{ section.settings.alignment }}; background-image: url('{{ section.settings.image | img_url: '300x300' }});"
+     {% endif %}>                                                                     
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Welcome to Haiti Coffee Co.</h1>
+                <p>Sourced from small farmers and roasted locally.</p>
+              
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn hero__btn">
+          {{ section.settings.button_label | escape }}
+        </a>
+      {% endif %}
+      
+      
+      {% if section.settings.button_label2 != blank and section.settings.button_link2 != blank %}
+        <a href="{{ section.settings.button_link2 }}" class="btn hero__btn">
+          {{ section.settings.button_label2 | escape }}
+        </a>
+      {% endif %}
+      
+            </div>
+        </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "IndexImage",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+
+        "type": "text",
+        "id": "button_label2",
+        "label": "Button label2"
+      },
+      {
+        "type": "url",
+        "id": "button_link2",
+        "label": "Button link2"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+	],
+		"presets": [
+      {
+        "name": "Image Header",
+        "category": "Image"
+      }]
+  }
+{% endschema %}
+

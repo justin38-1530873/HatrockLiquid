@@ -108,6 +108,7 @@
             <ul>
               {% for childlink in link.links %}
                 <li>
+                <script>console.log({{ childlink | json }})</script>
                   <a href="{{ childlink.url }}">
                     {{ childlink.title }}
                   </a>
